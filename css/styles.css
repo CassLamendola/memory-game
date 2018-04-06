@@ -1,0 +1,170 @@
+body {
+	/*background-image: url('../img/wormz.png');*/
+	background-image: url('../img/geometry2.png');
+	font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.title {
+	color: #3C3A41;
+	font-size: 7vh;
+}
+
+ul{
+	list-style: none;
+}
+
+.stats {
+	display: flex;
+	justify-content: space-around;
+	margin-top: -3vh;
+}
+
+.score {
+	border-radius: 10px;
+	padding: 5px;
+	background-color: #3C3A41;
+	width: 100px;
+	height: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+}
+
+.stars {
+	margin: 0px;
+	padding: 0px;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.fa-star {
+	color: #FCB639;
+}
+
+.score .fa-redo-alt {
+	cursor: pointer;
+}
+
+.deck {
+	width: 70vh;
+	height: 70vh;
+	background: linear-gradient(to bottom right, #C3E5F8, #147EFC);
+	/*#FCB639
+	#147EFC*/
+	/*background-color: #FA4F32;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 5px 2px 20px 0 #3C3A41;
+}
+
+.card {
+	width: 15vh;
+	height: 15vh;
+	background-color: #3C3A41;
+	/*background-color: #2FD9DD;*/
+	box-shadow: 5px 2px 20px 0 #3C3A41;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out;
+}
+
+.card img {
+	width: 10vh;
+	height: 10vh;
+	visibility: hidden;
+	
+}
+
+.card.flipped {
+	transform: rotateY(180deg);
+}
+
+.card.flipped img{
+	width: 10vh;
+	height: 10vh;
+	visibility: visible;
+	transition-delay: 0.25s;
+}
+
+.card.flipped.match {
+	background-color: #1ACB69
+}
+
+.card.flipped.no-match {
+	background-color: #A7220B
+}
+
+.congrats {
+	display: none;
+}
+
+.congrats h1 {
+	width: 100%;
+	font-size: 30px;
+}
+
+.congrats p {
+	width: 100%;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 20%;
+	line-height: 50px;
+}
+
+.congrats button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	width: 40%;
+	margin: 5%;
+	height: 40px;
+	background-color: #3C3A41;
+	color: white;
+	cursor: pointer;
+	border: 0;
+	align-self: flex-end;
+}
+
+.congrats button:hover {
+	background-color: white;
+	color: #3C3A41;
+}
+
+.congrats.winner {
+	box-sizing: border-box;
+	position: absolute;
+	top: 150px;
+	height: 50vh;
+	background-color: #C3E5F8;
+	width: 50vw;
+	left: 25vw;
+	padding: 20px 5%;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	border-radius: 10px;
+	box-shadow: 5px 2px 20px 0 #3C3A41;
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	color: #3C3A41;
+}
